@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Wine Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <!-- Sandwich icon button -->
+        <button type="button" id="openBtn" class="menu-btn" title="Open menu">☰</button>
+        <!-- Slider menu -->
+        <div class="menu" id="menu">
+            <!-- Close button -->
+            <button type="button" id="closeBtn" class="close-btn" title="Close menu">×</button>
+            <div class="menu-items">
+                <img src="images/logo.svg" alt="Velvet Wine logo" width="80" height="80">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="ourWines.html">Our Wines</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <a href="index.html" class="brand"><img src="images/logo.svg" alt="" width="30" height="30">Velvet Wine</a>
+    <!-- Cart icon -->
+    <div class="cart">🛒</div>
+</header>
+<main>
+    <!-- Page title -->
+    <div class="pageTitle">
+        <h1>Shop Our Wines</h1>
+        <p>Browse our range of handcrafted wines.</p>
+    </div>
+    <div class="shopLayout">
+        <!-- Filter button, search box and sort box -->
+        <div class="shopTools">
+            <button type="button" id="filterBtn" class="filterBtn">⊜ Filter</button>
+                <div class="searchBar">
+                    <input type="text" id="searchInput" class="searchBox" placeholder="Search wines..." title="Search wines">
+                    <button type="button" id="searchBtn" class="searchBtn" title="Search">🔍</button>
+                </div>
+            <select class="sortBox" id="sortBox" title="Sort by">
+                <option value="default">Sort By</option>
+                <option value="low">Price low to high</option>
+                <option value="high">Price high to low</option>
+            </select>
+        </div>
+        <!-- Filter panel: hidden on phones until Filter is pressed -->
+        <div class="filterPanel" id="filterPanel">
+            <h2>Categories</h2>
+            <ul>
+                <li><input type="radio" name="category" title="All Wines" checked> All Wines</li>
+                <li><input type="radio" name="category" title="Red Wines"> Red Wines</li>
+                <li><input type="radio" name="category" title="White Wines"> White Wines</li>
+                <li><input type="radio" name="category" title="Rose Wines"> Rose Wines</li>
+                <li><input type="radio" name="category" title="Sparkling Wines"> Sparkling Wines</li>
+            </ul>
+            <h2>Size</h2>
+            <ul>
+                <li><input type="radio" name="size" title="750ML" checked> 750ML</li>
+                <li><input type="radio" name="size" title="1.5L"> 1.5L</li>
+                <li><input type="radio" name="size" title="3L"> 3L</li>
+            </ul>
+            <h2>Price</h2>
+            <input type="text" class="priceBox" placeholder="$40-50" title="Price range">
+            <h2>Region</h2>
+            <ul>
+                <li><input type="radio" name="region" title="Hastings" checked> Hastings</li>
+                <li><input type="radio" name="region" title="Napier"> Napier</li>
+                <li><input type="radio" name="region" title="Havelock"> Havelock</li>
+                <li><input type="radio" name="region" title="Central Hawkes Bay"> Central Hawkes Bay</li>
+            </ul>
+        </div>
+        <!-- All 20 wine cards Displayed-->
+        <div class="shopGrid">
+
+            <div class="shopCard" data-category="Red" data-size="750ML" data-region="Hastings">
+                <img src="images/redWine.png" alt="Red Wine bottle" width="300" height="400">
+                <h3>Red Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard" data-category="White" data-size="750ML" data-region="Hastings">
+                <img src="images/whiteWine.png" alt="White Wine bottle" width="300" height="400">
+                <h3>White Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard" data-category="Rose" data-size="750ML" data-region="Hastings">
+                <img src="images/rose.png" alt="Rose Wine bottle" width="300" height="400">
+                <h3>Rose Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard" data-category="Red" data-size="1.5L" data-region="Napier">
+                <img src="images/redWine.png" alt="Red Wine bottle" width="300" height="400">
+                <h3>Red Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard" data-category="White" data-size="1.5L" data-region="Napier">
+                <img src="images/whiteWine.png" alt="White Wine bottle" width="300" height="400">
+                <h3>White Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard" data-category="Red" data-size="750ML" data-region="Havelock">
+                <img src="images/redWine.png" alt="Red Wine bottle" width="300" height="400">
+                <h3>Red Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard" data-category="White" data-size="750ML" data-region="Havelock">
+                <img src="images/whiteWine.png" alt="White Wine bottle" width="300" height="400">
+                <h3>White Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard" data-category="Rose" data-size="3L" data-region="Central Hawkes Bay">
+                <img src="images/rose.png" alt="Rose Wine bottle" width="300" height="400">
+                <h3>Rose Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard" data-category="Red" data-size="750ML" data-region="Hastings">
+                <img src="images/redWine.png" alt="Red Wine bottle" width="300" height="400">
+                <h3>Red Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard extra" data-category="White" data-size="750ML" data-region="Hastings">
+                <img src="images/whiteWine.png" alt="White Wine bottle" width="300" height="400">
+                <h3>White Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard extra" data-category="Red" data-size="1.5L" data-region="Napier">
+                <img src="images/redWine.png" alt="Red Wine bottle" width="300" height="400">
+                <h3>Red Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard extra" data-category="White" data-size="1.5L" data-region="Napier">
+                <img src="images/whiteWine.png" alt="White Wine bottle" width="300" height="400">
+                <h3>White Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard extra" data-category="Rose" data-size="750ML" data-region="Havelock">
+                <img src="images/rose.png" alt="Rose Wine bottle" width="300" height="400">
+                <h3>Rose Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard extra" data-category="Red" data-size="3L" data-region="Central Hawkes Bay">
+                <img src="images/redWine.png" alt="Red Wine bottle" width="300" height="400">
+                <h3>Red Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard extra" data-category="White" data-size="750ML" data-region="Hastings">
+                <img src="images/whiteWine.png" alt="White Wine bottle" width="300" height="400">
+                <h3>White Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard extra" data-category="Red" data-size="750ML" data-region="Havelock">
+                <img src="images/redWine.png" alt="Red Wine bottle" width="300" height="400">
+                <h3>Red Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard extra" data-category="White" data-size="3L" data-region="Central Hawkes Bay">
+                <img src="images/whiteWine.png" alt="White Wine bottle" width="300" height="400">
+                <h3>White Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard extra" data-category="Rose" data-size="1.5L" data-region="Napier">
+                <img src="images/rose.png" alt="Rose Wine bottle" width="300" height="400">
+                <h3>Rose Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard extra" data-category="Red" data-size="750ML" data-region="Hastings">
+                <img src="images/redWine.png" alt="Red Wine bottle" width="300" height="400">
+                <h3>Red Wine</h3>
+                <p>$50</p>
+            </div>
+
+            <div class="shopCard extra" data-category="White" data-size="750ML" data-region="Hastings">
+                <img src="images/whiteWine.png" alt="White Wine bottle" width="300" height="400">
+                <h3>White Wine</h3>
+                <p>$50</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Wine information pop-up -->
+    <div class="winePopup" id="winePopup">
+        <div class="popupContent">
+
+            <button type="button" id="closePopup" class="closePopup">X</button>
+
+            <h2 id="popupName">Wine Name</h2>
+            <p id="popupPrice">$50</p>
+            <p id="popupDescription">A handcrafted wine.</p>
+
+            <label for="wineQuantity">Quantity:</label>
+            <input type="number" id="wineQuantity" value="1" min="1">
+
+            <button type="button" id="addToCart" class="addToCart">
+                Add to Cart
+            </button>
+
+            <p id="cartMessage"></p>
+
+        </div>
+    </div>
+
+</main>
+
+<!-- Footer section-->
+<footer>
+    <div class="footBar">
+        <img src="images/logo.svg" alt="Velvet Wine logo" class="footerImg" width="45" height="45">
+        <div class="textSection">
+            <div class="exploreSection">
+                <h2>Explore</h2>
+                <ul><li>Shop</li><li>Our Wines</li></ul>
+            </div>
+            <div class="contactSection">
+                <h2>Contact</h2>
+                <ul><li>Contact Us</li><li>Locations</li></ul>
+            </div>
+            <div class="subscribeSection">
+                <h2>Subscribe</h2>
+                <ul><li>Newsletter</li></ul>
+            </div>
+            <div class="Policies">
+                <h2>Policies</h2>
+                <ul><li>Privacy</li><li>Delivery</li></ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/shop.js"></script>
+</body>
+</html>

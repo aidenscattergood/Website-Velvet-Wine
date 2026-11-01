@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Wine Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <!-- Sandwich icon button  -->
+        <button type="button" id="openBtn" class="menu-btn" title="Open menu">☰</button>
+        <!-- Slideer menu -->
+        <div class="menu" id="menu">
+            <!-- Close button -->
+            <button type="button" id="closeBtn" class="close-btn" title="Close menu">×</button>
+            <div class="menu-items">
+                <img src="images/logo.svg" alt="Velvet Wine logo" width="80" height="80">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="ourWines.html">Our Wines</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <a href="index.html" class="brand"><img src="images/logo.svg" alt="" width="30" height="30">Velvet Wine</a>
+    <!-- Cart icon -->
+    <div class="cart">🛒</div>
+</header>
+<main>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="heroText">
+            <h1>Enjoy The Art Of Wine Making</h1>
+            <p>Handcrafted reds, whites and rosés from our Hawke's Bay vineyards.</p>
+            <button type="button" class="subBtn">Subscribe</button>
+        </div>
+    </div>
+    <!-- Four small info boxes for large screens  -->
+    <div class="perks">
+        <div class="perk"><div>🔒</div><div><h2>Secure Shopping</h2><p>Safe and easy checkout.</p></div></div>
+        <div class="perk"><div>🚚</div><div><h2>Fast Delivery</h2><p>Sent out in 2 to 3 days.</p></div></div>
+        <div class="perk"><div>🏆</div><div><h2>Award Winning</h2><p>Medals from NZ wine shows.</p></div></div>
+        <div class="perk"><div>🌿</div><div><h2>Made Ethically</h2><p>Looked after by hand.</p></div></div>
+    </div>
+    <!-- Featured wines Section-->
+    <div class="featured">
+        <div class="featuredTop">
+            <h2>Featured Wines</h2>
+            <button type="button" id="seeBtn" class="seeBtn">See All</button>
+        </div>
+        <div class="wineRow" id="wineRow">
+            <div class="wineCard">
+                <img src="images/redWine.png" alt="Red Wine bottle" width="300" height="400">
+                <h3>Red Wine</h3>
+                <p>$50</p>
+            </div>
+            <div class="wineCard">
+                <img src="images/whiteWine.png" alt="White Wine bottle" width="300" height="400">
+                <h3>White Wine</h3>
+                <p>$50</p>
+            </div>
+            <div class="wineCard">
+                <img src="images/Rose.png" alt="Rosé Wine bottle" width="300" height="400">
+                <h3>Rosé Wine</h3>
+                <p>$50</p>
+            </div>
+            <div class="wineCard extra">
+                <img src="images/whiteWine.png" alt="White Wine bottle" width="300" height="400">
+                <h3>White Wine</h3>
+                <p>$50</p>
+            </div>
+            <div class="wineCard extra">
+                <img src="images/redWine.png" alt="Red Wine bottle" width="300" height="400">
+                <h3>Red Wine</h3>
+                <p>$50</p>
+            </div>
+            <div class="wineCard extra">
+                <img src="images/redWine.png" alt="Red Wine bottle" width="300" height="400">
+                <h3>Red Wine</h3>
+                <p>$50</p>
+            </div>
+            <div class="wineCard extra">
+                <img src="images/Rose.png" alt="Rosé Wine bottle" width="300" height="400">
+                <h3>Rosé Wine</h3>
+                <p>$50</p>
+            </div>
+        </div>
+    </div>
+    <!-- Our Story Section-->
+    <div class="story">
+        <img src="images/Story.png" alt="Our vineyard" width="600" height="400">
+        <div>
+            <h2>Our Story</h2>
+            <p>Velvet Wine started with a small block of vines and a simple idea: good wine should be honest and easy to enjoy. We still pick and bottle by hand.</p>
+        </div>
+    </div>
+</main>
+<!-- Footer section-->
+<footer>
+    <div class="footBar">
+        <img src="images/logo.svg" alt="Velvet Wine logo" class="footerImg" width="45" height="45">
+        <div class="textSection">
+            <div class="exploreSection">
+                <h2>Explore</h2>
+                <ul><li>Shop</li><li>Our Wines</li></ul>
+            </div>
+            <div class="contactSection">
+                <h2>Contact</h2>
+                <ul><li>Contact Us</li><li>Locations</li></ul>
+            </div>
+            <div class="subscribeSection">
+                <h2>Subscribe</h2>
+                <ul><li>Newsletter</li></ul>
+            </div>
+            <div class="Policies">
+                <h2>Policies</h2>
+                <ul><li>Privacy</li><li>Delivery</li></ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/index.js"></script>
+</body>
+</html>

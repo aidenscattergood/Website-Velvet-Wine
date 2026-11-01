@@ -1,0 +1,1255 @@
+
+/*SETUP CSS CODE*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    background-color: #f5f1e8;
+    color: #3b001d;
+}
+
+h1, h2, h3 {
+    margin: 0 0 8px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #3b001d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.cart {
+    color: white;
+    font-size: 26px;
+}
+
+
+/* Menu */
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 60%;
+    max-width: 300px;
+    height: 100%;
+    background-color: #f5f1e8;
+    transition: left 0.4s;
+    z-index: 50;
+}
+
+.open {
+    left: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background: none;
+    border: none;
+    color: #3b001d;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.menu-items {
+    padding: 60px 20px 20px 20px;
+    text-align: center;
+}
+
+
+.menu-items a {
+    display: block;
+    padding: 12px 0;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #3b001d;
+    text-decoration: none;
+}
+
+.menu-items a:hover {
+    color: #8a6a2f;
+}
+
+
+/* Home page */
+.hero {
+    background-image: url("../images/landingPage.png");
+    background-size: cover;
+    background-position: center;
+    padding: 16px 12px;
+}
+
+.heroText {
+    padding: 15px;
+    max-width: 320px;
+    text-align: center;
+    color: beige;
+}
+
+.heroText h1 {
+    color: beige;
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.heroText p {
+    font-size: 14px;
+    color: beige;
+}
+
+.subBtn {
+    background-color: beige;
+    color: #8a6a2f;
+    border: 2px solid #8a6a2f;
+    border-radius: 6px;
+    padding: 8px 20px;
+    font-size: 18px;
+}
+
+.perks {
+    display: none;
+}
+
+.perk {
+    flex: 1;
+    display: flex;
+    gap: 8px;
+    background-color: #fbf9f4;
+    border: 1px solid #dccfb8;
+    padding: 10px;
+}
+
+.perk h2 {
+    font-size: 16px;
+}
+
+.perk p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.featured {
+    padding: 10px;
+}
+
+.featuredTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.featuredTop a {
+    color: #8a6a2f;
+    font-weight: bold;
+}
+
+.wineRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.wineCard {
+    flex: 0 0 calc(33.333% - 6px);
+    background-color: #fbf9f4;
+    border: 1px solid #dccfb8;
+    padding: 6px;
+    text-align: center;
+}
+
+.wineCard h3 {
+    font-size: 13px;
+    margin: 4px 0 0 0;
+}
+
+.wineCard p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.wineCard img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+/* Only hide extra featured wines on the home page */
+.wineCard.extra {
+    display: none;
+}
+
+.showAll .wineCard.extra {
+    display: block;
+}
+
+.seeBtn {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #8a6a2f;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.seeBtn:hover {
+    text-decoration: underline;
+}
+
+.story {
+    display: flex;
+    background-color: #fbf9f4;
+    border: 1px solid #dccfb8;
+    margin: 10px;
+}
+
+.story img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
+.story div {
+    padding: 12px;
+    color: #3b001d;
+}
+
+.story h1,
+.story h2,
+.story h3,
+.story p {
+    color: #3b001d;
+}
+
+.story p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* Contact page */
+.pageTitle {
+    text-align: center;
+    padding: 20px 10px;
+    border-bottom: 1px solid #dccfb8;
+}
+
+.pageTitle p {
+    margin: 0;
+}
+
+.contactInfo {
+    text-align: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid #dccfb8;
+    font-weight: bold;
+}
+
+.contactInfo ul {
+    display: inline-block;
+    text-align: left;
+}
+
+.contactInfo li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.contactInfo .icon {
+    font-size: 24px;
+}
+
+.contactInfo h3 {
+    margin: 0;
+}
+
+.contactInfo p {
+    margin: 0;
+}
+
+.hours {
+    text-align: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid #dccfb8;
+}
+
+.hours div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 6px 0;
+}
+
+.hours strong {
+    width: 140px;
+    text-align: left;
+}
+
+.hours p {
+    width: 90px;
+    margin: 0;
+    text-align: left;
+}
+
+.team {
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.teamRow {
+    display: flex;
+    gap: 8px;
+}
+
+.teamRow div {
+    flex: 1;
+    background-color: #fbf9f4;
+    border: 1px solid #dccfb8;
+    padding: 4px;
+}
+
+.teamRow img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.teamRow p {
+    margin: 0;
+    font-size: 12px;
+}
+
+
+/* Footer section*/
+footer {
+    background-color: #2a0812;
+    color: white;
+    padding: 12px 10px;
+    margin-top: 10px;
+}
+
+.footBar {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.footerImg {
+    background-color: white;
+}
+
+.textSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 1;
+    min-width: 0;
+    gap: 6px;
+    font-size: 12px;
+}
+
+.textSection div {
+    min-width: 0;
+}
+
+footer h2 {
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+footer ul {
+    list-style-type: disc;
+    padding-left: 12px;
+}
+
+footer li {
+    overflow-wrap: anywhere;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #d9b86c;
+}
+
+
+/* Shop page */
+
+.shopLayout {
+    position: relative;
+}
+
+.shopTools {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+}
+
+.filterBtn {
+    background: none;
+    border: none;
+    color: #3b001d;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.searchBar {
+    flex: 1;
+    display: flex;
+    border: 1px solid #dccfb8;
+    background-color: #fbf9f4;
+}
+
+.searchBox {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: none;
+    padding: 6px;
+    font-family: inherit;
+}
+
+.searchBtn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.sortBox {
+    display: none;
+}
+
+.filterPanel {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 180px;
+    background-color: #fbf9f4;
+    border: 1px solid #dccfb8;
+    padding: 10px;
+    z-index: 10;
+}
+
+.showFilter {
+    display: block;
+}
+
+.filterPanel h2 {
+    font-size: 16px;
+    margin: 10px 0 4px 0;
+}
+
+.filterPanel li {
+    font-size: 14px;
+    padding: 2px 0;
+}
+
+.priceBox {
+    width: 100%;
+    padding: 4px;
+    text-align: center;
+    border: 1px solid #dccfb8;
+    background-color: #fbf9f4;
+    font-family: inherit;
+}
+
+.priceBox::placeholder {
+    color: #3b001d;
+}
+
+.shopGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
+}
+
+.shopCard {
+    flex: 0 0 calc(33.333% - 6px);
+    box-sizing: border-box;
+    background-color: #fbf9f4;
+    border: 1px solid #dccfb8;
+    padding: 6px;
+    text-align: center;
+}
+
+.shopCard img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.shopCard h3 {
+    font-size: 13px;
+    margin: 4px 0 0 0;
+}
+
+.shopCard p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Our Wines page */
+.winesBanner {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+    border-bottom: 1px solid #dccfb8;
+}
+
+.winesBanner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bannerText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 8px;
+    text-align: center;
+    background-color: rgba(251, 249, 244, 0.9);
+}
+
+.bannerText h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.bannerText p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.stepsRow {
+    display: flex;
+    gap: 6px;
+    padding: 8px;
+}
+
+.stepCard {
+    flex: 1;
+    min-width: 0;
+    background-color: #fbf9f4;
+    border: 1px solid #dccfb8;
+    padding: 6px;
+    text-align: center;
+}
+
+.stepCard img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.stepCard h3 {
+    font-size: 13px;
+    margin: 4px 0;
+}
+
+.stepCard p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.3;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+/* About Us page */
+.aboutRow {
+    display: flex;
+    background-color: #fbf9f4;
+    border: 1px solid #dccfb8;
+    margin: 8px;
+}
+
+.aboutRow img {
+    width: 50%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.aboutText {
+    width: 50%;
+    min-width: 0;
+    padding: 10px;
+}
+
+.aboutText h2 {
+    font-size: 18px;
+}
+
+.aboutText p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.mission {
+    margin: 8px;
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 18px;
+}
+
+.missionRow {
+    display: flex;
+    gap: 6px;
+}
+
+.missionCard {
+    flex: 1;
+    min-width: 0;
+    background-color: #fbf9f4;
+    border: 1px solid #dccfb8;
+    padding: 6px;
+    text-align: left;
+}
+
+.missionCard img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.missionCard h3 {
+    font-size: 15px;
+    margin: 4px 0;
+}
+
+.missionCard p {
+    margin: 0;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+/* Locations page */
+.locationsTitle {
+    background-color: #fbf9f4;
+    border: 1px solid #dccfb8;
+    margin: 8px;
+    padding: 8px;
+    text-align: center;
+}
+
+.locationsTitle h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.locationsTitle p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.locationsRow {
+    display: flex;
+    background-color: #fbf9f4;
+    border: 1px solid #dccfb8;
+    margin: 8px;
+}
+
+.locationsRow > img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.locationList {
+    width: 50%;
+}
+
+.location {
+    padding: 8px;
+    border-left: 1px solid #dccfb8;
+}
+
+.locationHead {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.locationHead img {
+    width: 22px;
+    height: 22px;
+}
+
+.location h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.location p {
+    margin: 4px 0 0 0;
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+.visitRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fbf9f4;
+    border: 1px solid #dccfb8;
+    margin: 8px;
+    padding: 8px;
+}
+
+.visitRow img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.visitRow h2 {
+    font-size: 17px;
+    margin: 0;
+}
+
+.visitRow p {
+    margin: 0;
+    font-size: 12px;
+}
+
+/* Tablet and bigger (mobile first: these only add to the phone styles above) */
+@media (min-width: 768px) {
+
+    main {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    header {
+        padding: 10px 30px;
+    }
+
+    .brand {
+        font-size: 26px;
+    }
+
+    .hero {
+        padding: 40px;
+        min-height: 300px;
+    }
+
+    .heroText {
+        max-width: 380px;
+        text-align: left;
+    }
+
+    .heroText h1 {
+        font-size: 34px;
+    }
+
+    .heroText p {
+        font-size: 17px;
+    }
+
+    /* four info boxes in a row */
+    .perks {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .perk h2 {
+        font-size: 14px;
+    }
+
+    .perk p {
+        font-size: 12px;
+    }
+
+    /* all 7 wines in one row */
+    .featured {
+        padding: 10px 20px;
+    }
+
+    .seeBtn {
+        display: none;
+    }
+
+    .wineRow {
+        flex-wrap: nowrap;
+    }
+
+    .wineCard {
+        flex: 1;
+    }
+
+    .wineCard.extra {
+        display: block;
+    }
+
+    .wineCard h3,
+    .wineCard p {
+        font-size: 14px;
+    }
+
+    .story {
+        margin: 10px 20px;
+    }
+
+    .story img {
+        width: 45%;
+    }
+
+    .story div {
+        padding: 24px;
+    }
+
+    .story p {
+        font-size: 17px;
+    }
+
+    /* contact page: team cards spread across the width */
+    .teamRow {
+        justify-content: space-between;
+    }
+
+    .teamRow div {
+        flex: 0 0 20%;
+    }
+
+    .teamRow p {
+        font-size: 16px;
+    }
+
+    .textSection {
+        font-size: 15px;
+    }
+
+    footer h2 {
+        font-size: 16px;
+    }
+
+    /* shop page: filter panel on the left, search and cards on the right */
+    .shopLayout {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        grid-template-areas:
+            "panel tools"
+            "panel cards";
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    .shopTools {
+        grid-area: tools;
+        padding: 0;
+    }
+
+    .filterBtn {
+        display: none;
+    }
+
+    .sortBox {
+        display: block;
+        padding: 6px;
+        border: 1px solid #dccfb8;
+        background-color: #fbf9f4;
+        font-family: inherit;
+    }
+    
+    .filterPanel {
+        grid-area: panel;
+        display: block;
+        position: static;
+        margin: 0;
+    }
+
+    .shopGrid {
+        grid-area: cards;
+        padding: 0;
+        align-content: start;
+    }
+
+/* this was taken from youtube */
+    .shopCard {
+        flex: 0 0 calc(20% - 7px);
+    }
+
+
+    .shopCard h3,
+    .shopCard p {
+        font-size: 14px;
+    }
+
+        /* our wines page */
+    .winesBanner {
+        height: 220px;
+    }
+
+    .bannerText {
+        width: 60%;
+        padding: 12px;
+    }
+
+    .bannerText h1 {
+        font-size: 38px;
+    }
+
+    .bannerText p {
+        font-size: 17px;
+    }
+
+    .stepsRow {
+        gap: 12px;
+        padding: 12px 20px;
+    }
+
+    .stepCard {
+        padding: 14px;
+    }
+
+    .stepCard img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .stepCard h3 {
+        font-size: 18px;
+    }
+
+    .stepCard p {
+        font-size: 14px;
+        line-height: 1.5;
+  
+    }
+
+        /* about us page */
+    .aboutRow {
+        margin: 12px 20px;
+    }
+
+    .aboutText {
+        padding: 24px;
+    }
+
+    .aboutText h2 {
+        font-size: 26px;
+    }
+
+    .aboutText p {
+        font-size: 17px;
+    }
+
+    .mission {
+        margin: 12px 20px;
+    }
+
+    .mission h2 {
+        font-size: 26px;
+    }
+
+    .missionRow {
+        gap: 12px;
+    }
+
+    .missionCard {
+        display: flex;
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .missionCard img {
+        width: 60px;
+        height: 60px;
+        flex-shrink: 0;
+    }
+
+    .missionCard h3 {
+        font-size: 18px;
+        margin-top: 0;
+    }
+
+    .missionCard p {
+        font-size: 14px;
+    }
+
+        /* locations page */
+    .locationsTitle {
+        margin: 12px 20px;
+        padding: 14px;
+    }
+
+    .locationsTitle h1 {
+        font-size: 34px;
+    }
+
+    .locationsTitle p {
+        font-size: 17px;
+    }
+
+    .locationsRow {
+        margin: 12px 20px;
+    }
+
+    .locationsRow > img {
+        width: 55%;
+    }
+
+    .locationList {
+        width: 45%;
+    }
+
+    .location {
+        padding: 24px;
+    }
+
+    .locationHead {
+        gap: 10px;
+    }
+
+    .locationHead img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .location h3 {
+        font-size: 24px;
+    }
+
+    .location p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .visitRow {
+        margin: 12px 20px;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .visitRow img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .visitRow h2 {
+        font-size: 24px;
+    }
+
+    .visitRow p {
+        font-size: 17px;
+    }
+}
+
+
+
+
+
+
+/* Large screens */
+
+@media (min-width: 1100px) {
+
+    main {
+        max-width: 1100px;
+    }
+
+    .hero {
+        padding: 70px 60px;
+        min-height: 420px;
+    }
+
+    .heroText {
+        max-width: 460px;
+    }
+
+    .heroText h1 {
+        font-size: 44px;
+    }
+
+    .perk h2 {
+        font-size: 16px;
+    }
+
+    .perk p {
+        font-size: 14px;
+    }
+
+    .story div {
+        padding: 40px;
+    }
+
+    .story h2 {
+        font-size: 30px;
+    }
+
+    footer {
+        padding: 24px 60px;
+    }
+}
+
+
+/* Wine product pop-up */
+
+.winePopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    z-index: 100;
+}
+
+.popupContent {
+    background: #f5f1e8;
+    color: #3b001d;
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 85vh;
+    overflow-y: auto;
+    border: 1px solid #dccfb8;
+    position: relative;
+    text-align: center;
+}
+
+.closePopup {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: #3b001d;
+    cursor: pointer;
+}
+
+.popupContent h2 {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+#popupPrice {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#popupDescription {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#wineQuantity {
+    width: 65px;
+    padding: 8px;
+    margin: 10px;
+    font-size: 16px;
+    border: 1px solid #dccfb8;
+    background: #fbf9f4;
+    color: #3b001d;
+}
+
+.addToCart {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #3b001d;
+    color: #f5f1e8;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#cartMessage {
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+
+
+/* Mobile pop-up for item */
+
+@media (max-width: 767px) {
+
+    .winePopup {
+        padding: 12px;
+    }
+
+    .popupContent {
+        width: 100%;
+        max-width: 350px;
+        padding: 20px 15px;
+        max-height: 85vh;
+    }
+
+    .popupContent h2 {
+        font-size: 20px;
+    }
+
+    #popupPrice {
+        font-size: 18px;
+    }
+
+    #popupDescription {
+        font-size: 14px;
+    }
+
+    .addToCart {
+        padding: 13px;
+        font-size: 16px;
+    }
+}
